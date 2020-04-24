@@ -10,7 +10,7 @@
 
 ##### on MRI scans to segment the tumour.
 
-##### Implementation on: Google Colab.
+##### Implementation on: Google Collab.
 
 ```
 https://colab.research.google.com/drive/1ZxnCKDQrWmD4Y_fOdRed9wcM7yViVqTi
