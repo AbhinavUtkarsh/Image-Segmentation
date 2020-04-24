@@ -3,6 +3,7 @@ from sklearn.cluster import KMeans
 import cv2
 import datetime
 from matplotlib import pyplot as plt
+import time
 
 image1=cv2.imread("mri1.jpg")
 image2=cv2.imread("mri2.jpg")
@@ -49,4 +50,5 @@ for i in range(0,3):
         + ':'+str(dt.minute) + ':'+str(dt.second)
         + ' C_' + str(numClusters[i]) + '.' + fileExtension)
     print(filename)
+    time.sleep(1)
     cv2.imwrite(filename, concatImage[i])
