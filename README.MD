@@ -1,4 +1,4 @@
-## “Image segmentation by KNN Algorithm„
+## Image segmentation by KNN Algorithm
 
 ### Project Report
 
@@ -6,7 +6,7 @@
 
 # Problem Statement
 
-##### This Project has an analysis of K - Nearest Neighbor Algorithm
+##### This Project has an analysis of K - Nearest Neighbour Algorithm
 
 ##### on MRI scans to segment the tumour.
 
