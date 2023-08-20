@@ -1,4 +1,4 @@
-## Image segmentation by KNN Algorithm
+## Image segmentation by K-Means Clustering
 
 ### Project Report
 
@@ -6,26 +6,28 @@
 
 # Problem Statement
 
-##### This Project has an analysis of K - Nearest Neighbour Algorithm
+##### This Project has an analysis of K-Means Clustering
 
-##### on MRI scans to segment the tumour.
+##### on MRI scans to segment the tumor.
 
-##### Implementation on: Google Collab.
+##### Implementation on Google Collab.
 
 ```
 https://colab.research.google.com/drive/1ZxnCKDQrWmD4Y_fOdRed9wcM7yViVqTi
 ```
 # Program in Brief
 ```
-The Number Program initially asks for the number of clusters to be selected in the K-NN algorithm. Obviously more the clusters more the number of segmented parts in the image.
-So the steps Involved in K-NN algorithm:
-1) Choosing the number of Clusters
-2) Selecting at random K points for centroid, in our case 40 was passed as the number of
-neighbors.
-3) Assigning each Data point as we say each pixel value closest to the above centroid that
-further gives us clusters.
-4) Now we compute and place the new centroid for each cluster.
-5) On the last step we just do the reassignment of the new nearest centroid and if in any case any new reassignment took place we would reiterate the above process.
+The program performs K-means clustering on images. The steps involved in K-means clustering are:
+
+Choosing the Number of Clusters: The user specifies the number of clusters which determines how the image will be segmented.
+
+Initialization of Centroids: Centroids are initialized. The program runs the initialization 40 times (n_init=40) and selects the best one.
+
+Assign Pixels to Centroids: Every pixel in the image is assigned to its nearest centroid based on its color value.
+
+Re-compute Centroids: After all pixels have been assigned to clusters, the centroids of the clusters are recalculated based on the average color values of the pixels in the cluster.
+
+Reassignment and Iteration: Pixels are reassigned to the new nearest centroid. If any reassignment happens, the centroids are recalculated. This process iterates until centroids do not change between iterations or a maximum of 500 iterations (max_iter=500) is reached.
 ```
 ##### Note: The program saves the newly generated images in the PWD.
 
@@ -39,20 +41,20 @@ further gives us clusters.
 
 ##### Details
 
-This project report and file has been submitted by Mr. Abhinav Utkarsh
+This project report and file have been submitted by Mr. Abhinav Utkarsh
 
 Date: 26 Nov 2019
 
-Subject: Digital Image processing
+Subject: Digital Image Processing
 
 
 Steps to run the included code:
 
 There are 3 ways to run the code
 
-	1) Install python and run the .py file with the images to be segemented in the same working directory as of the python file. The output would be stored at the same PWD.
+	1) Install Python and run the .py file with the images to be segmented in the same working directory as of the Python file. The output would be stored at the same PWD.
 
-	2) Or simply use the Google Collab. link provided with project report and add it to your own google colab instance. 
+	2) Or simply use the Google Collab. link provided with project report and add it to your own Google colab instance. 
    		NOTE: You need to upload the images to collab. after every tab close.
 
 	3) you could also install jupyter notebook and take it to the PWD of.ipynb with the images already there following simply with the code execution.
